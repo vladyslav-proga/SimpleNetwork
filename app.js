@@ -1,5 +1,7 @@
 'use strict';
 
+require('dotenv').config();
+
 const Koa = require('koa');
 
 const config = require('./lib/config');
