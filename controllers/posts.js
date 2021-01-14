@@ -41,7 +41,7 @@ router.get('/:id', async ctx => {
   }
 });
 
-router.put('/', passport.authenticate('jwt', { session: false},
+router.put('/', passport.authenticate('jwt', { session: false },
   async ctx => {
     const { _id, body } = ctx.request.body;
     const user = ctx.state.user._id;
