@@ -1,5 +1,6 @@
 'use strict';
 
+//error function
 module.exports = async (ctx, next) => {
   try {
     await next();
