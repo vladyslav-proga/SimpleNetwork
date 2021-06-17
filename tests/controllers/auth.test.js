@@ -33,7 +33,7 @@ describe('User Auth API', async () => {
         body: testUser
       });
       res.statusCode.should.eql(400)
-      res.body.error.should.eql('Email already exists')
+      res.body.error.should.eql('Email already exists');
     });
   });
   describe('POST /auth/login', () => {
@@ -46,8 +46,8 @@ describe('User Auth API', async () => {
         json: true,
         body: testUser
       });
-      res.statusCode.should.eql(200)
-      res.body.token.should.containEql('Bearer ')
+      res.statusCode.should.eql(200);
+      res.body.token.should.containEql('Bearer ');
     });
     it('logs in with nonexistent user', async () => {
       const res = await helpers.request.post('auth/login', {
@@ -57,8 +57,8 @@ describe('User Auth API', async () => {
           password: 'password'
         }
       });
-      res.statusCode.should.eql(400)
-      res.body.error.should.eql('User with this email does not exist')
+      res.statusCode.should.eql(400);
+      res.body.error.should.eql('User with this email does not exist');
     });
     it('logs in with incorrect password', async () => {
       await helpers.request.post('auth/register', {
@@ -72,8 +72,8 @@ describe('User Auth API', async () => {
           password: 'wrongpassword'
         }
       });
-      res.statusCode.should.eql(400)
-      res.body.error.should.eql('Password incorrect')
+      res.statusCode.should.eql(400);
+      res.body.error.should.eql('Password incorrect');
     });
   });
 });
