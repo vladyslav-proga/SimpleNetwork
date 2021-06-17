@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 'use strict';
 
 const helpers = require('../helpers');
@@ -32,7 +33,7 @@ describe('User Auth API', async () => {
         json: true,
         body: testUser
       });
-      res.statusCode.should.eql(400)
+      res.statusCode.should.eql(400);
       res.body.error.should.eql('Email already exists');
     });
   });
