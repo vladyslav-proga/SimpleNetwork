@@ -3,7 +3,7 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "test": "mocha --opts tests/mocha.opts"
+    "test": "mocha --config=test/.mocharc.json --node-env=test --exit"
   },
   "repository": {
     "type": "git",
