@@ -3,7 +3,11 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
+<<<<<<< HEAD
     "test": ""
+=======
+    "test": "mocha --opts tests/mocha.opts"
+>>>>>>> parent of 9e325be... update
   },
   "repository": {
     "type": "git",
